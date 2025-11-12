@@ -1,3 +1,5 @@
+#To find the sum of elements in an array of integers in Python
+
 def simpleArraySum(ar):
     # Write your code here
     
