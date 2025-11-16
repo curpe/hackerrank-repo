@@ -10,7 +10,7 @@
 #
 def printLinkedList(head):
     
-    current = head #Make the variable of head
+    current = head #Make the variable to read the data
     
     # Looping the head
     while current is not None: #check by loop if the head is none
