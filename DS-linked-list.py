@@ -35,14 +35,14 @@ class SinglyLinkedList:
 #     int data
 #     SinglyLinkedListNode next
 #
-#
 def printLinkedList(head):
     
-    current = head
+    current = head #Make the variable of head
     
-    while current is not None: #N nya harus gede si None-nya
-        print(current.data)
-        current = current.next
+    # Looping the head
+    while current is not None: #check by loop if the head is none
+        print(current.data) #print data of the head
+        current = current.next #the loop will read the next node by.next
         
 
 if __name__ == '__main__':
