@@ -34,6 +34,8 @@ def print_singly_linked_list(node, sep, fptr):
 #     int data
 #     SinglyLinkedListNode next
 #
+
+#llist is like a head in this case
 def insertNodeAtHead(llist, data):
     
     new_node = SinglyLinkedListNode(data)
@@ -43,7 +45,6 @@ def insertNodeAtHead(llist, data):
     
     #menggeser llist dengan new_node apabila tidak ada value
     #menggunakan .next untuk mengaplikasikannya
-    
     new_node.next = llist 
     
     return new_node
