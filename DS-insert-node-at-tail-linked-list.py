@@ -45,7 +45,7 @@ def insertNodeAtTail(head, data):
     if head is None:
         return newNode
     
-    #define variable of thecurrent head
+    #define variable of the current head
     current = head
     
     #kalo misalkan di node selanjutnya itu masih ada value, maka:
