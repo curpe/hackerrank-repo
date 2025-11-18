@@ -6,5 +6,5 @@ def simpleArraySum(ar):
     tot_sum = 0
     
     for element in ar:
-        tot_sum += element
+        tot_sum += element # or you can tot_sum = tot_sum + element
     return tot_sum
