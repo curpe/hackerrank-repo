@@ -9,10 +9,11 @@
 if __name__ == '__main__':
     n = int(input())
     
+    
     for i in range(n):
         print(i * i)
     
-# Expected output
+# Expected output / answer
 0
 1
 4
