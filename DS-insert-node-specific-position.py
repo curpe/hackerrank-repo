@@ -76,7 +76,7 @@ def insertNodeAtPosition(llist, data, position):
     # This is to traverse to the node just before the insertion position
     while head is not None and current_position < position - 1:
         head = head.next #update the head to the next
-        current_position += 1 
+        current_position += 1 #agregat agar looping terus berjalan sampai False
         
     # If we reached the desired position, insert the node
     if head is not None:
