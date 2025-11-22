@@ -61,14 +61,15 @@ def insertNodeAtPosition(llist, data, position):
     #define node
     new_node = SinglyLinkedListNode(data)
     
+    if llist is None:
+        return new_node
+        
     # Case 1: the head pointer maybe null
     # make a new node if there is null
     if position == 0:
         new_node.next = llist
         return new_node
-    
-    # Case 2: Insert value at specific positions
-    
+        
     # define variable
     head = llist #data to traverse the position
     current_position = 0 #temporary value
@@ -78,10 +79,8 @@ def insertNodeAtPosition(llist, data, position):
         head = head.next #update the head to the next
         current_position += 1 #agregat agar looping terus berjalan sampai False
         
-    # If we reached the desired position, insert the node
-    if head is not None:
-        new_node.next = head.next
-        head.next = new_node
+    new_node.next = head.next
+    head.next = new_node
     
     return llist
     
