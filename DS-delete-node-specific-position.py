@@ -37,13 +37,12 @@ def print_singly_linked_list(node, sep, fptr):
             fptr.write(sep)
 
 #
-# Complete the 'insertNodeAtPosition' function below.
+# Complete the 'deleteNode' function below.
 #
 # The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
 # The function accepts following parameters:
 #  1. INTEGER_SINGLY_LINKED_LIST llist
-#  2. INTEGER data
-#  3. INTEGER position
+#  2. INTEGER position
 #
 
 #
@@ -55,35 +54,44 @@ def print_singly_linked_list(node, sep, fptr):
 #
 #
 
-def insertNodeAtPosition(llist, data, position):
+def deleteNode(llist, position):
     # Write your code here
     
-    #define node
-    new_node = SinglyLinkedListNode(data)
-    head = llist #data to traverse the position
+    #check if the llist may be empty
+    if llist is None:
+        return None
     
-    if head is None:
-        return new_node
-        
-    # Case 1: the head pointer maybe null
-    # make a new node if there is null
+    #Skip the first position if needed 
+    #if there is the first head we want to skip
     if position == 0:
-        new_node.next = head
-        return new_node
-        
-    # define variable
-    current_position = 0 #temporary value
+        return llist.next
     
-    # This is to traverse to the node just before the insertion position
-    while head is not None and current_position < position - 1:
-        head = head.next #update the head to the next
-        current_position += 1 #agregat agar looping terus berjalan sampai False
+    #need to store the variable llist to current
+    #so it doesnt overlapping with the llist when looping
+    current = llist
+    current_pos = 0
+   
+    while current is not None and current_pos < position - 1:
+        current = current.next
+        current_pos += 1
         
-    new_node.next = head.next
-    head.next = new_node
+    if current is None and current.next is None:
+        return llist
+        
+    delete_the_node = current.next
+    current.next = delete_the_node.next
+    
+    # OR
+    
+    # current.next = current.next.next
     
     return llist
+        
     
+    
+        
+        
+        
     
 
 if __name__ == '__main__':
@@ -97,13 +105,11 @@ if __name__ == '__main__':
         llist_item = int(input())
         llist.insert_node(llist_item)
 
-    data = int(input())
-
     position = int(input())
 
-    llist_head = insertNodeAtPosition(llist.head, data, position)
+    llist1 = deleteNode(llist.head, position)
 
-    print_singly_linked_list(llist_head, ' ', fptr)
+    print_singly_linked_list(llist1, ' ', fptr)
     fptr.write('\n')
 
     fptr.close()
