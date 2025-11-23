@@ -65,15 +65,17 @@ def reversePrint(llist):
     while stack:
         print(stack.pop())
     
-# YOU CAN USING RECURISVE
+# YOU CAN USE RECURISVE
+
 # def reversePrint(llist):
-#     # Write your code here
+#     
 #     if llist is None:
 #         return llist 
         
 #     reversePrint(llist.next)
     
 #     print(llist.data)
+#but it's more complicated to explain
 
     
 
