@@ -32,7 +32,7 @@ def compareTriplets(a, b):
         elif a[i] < b[i]:
             score_b += 1 #update the temporary value
         elif a[i] == b[i]:
-            pass #no update
+            pass #no update anything
         
         score = (score_a, score_b) #define the comparative value
 
